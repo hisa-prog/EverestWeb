@@ -1,0 +1,19 @@
+.Header {
+    height: 60px;
+    overflow: hidden;
+    background-color: #ffffff10;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.TitleHeader {
+    color:white;
+    text-align: start;
+    margin: 24px;
+    font-size: 25px;
+    line-height: 19px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 550;
+}
