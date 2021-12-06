@@ -43,7 +43,7 @@ const cards: ICards[] = [
 ];
 
 export default function Home() {
-  const [infoAboutExpedition, setInfoAboutExpedition] = useState([]);
+  const [infoAboutExpedition, setInfoAboutExpedition] = useState<any>([]);
   const [currentPageExpedition, setCurrentPageExpedition] = useState(3);
   const [updatePage, setUpldatePage] = useState(0);
   const [showTable, setShowTable] = useState(false);
@@ -157,7 +157,7 @@ export default function Home() {
                 <TableHeader>Фамилия</TableHeader>
                 <TableHeader>Номер Телефона</TableHeader>
               </tr>
-              {infoAboutExpedition.map((items) => (
+              {infoAboutExpedition.map((items: any) => (
                 <tr>
                   <TableData>{items.name}</TableData>
                   <TableDataCenter>{items.lastName}</TableDataCenter>

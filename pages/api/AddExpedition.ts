@@ -16,7 +16,7 @@ export default async function handler(
   const expedition = await expeditionCollection.findOne({peopleCount: {$lt: 6}, idExpedition: {$eq: currentExpedition}})
   if(expedition === null){
       await expeditionCollection.insertOne({peopleCount: 1, peoples: [{name, lastName, number}], idExpedition: currentExpedition})
-  }else if((expedition <= 3) || (expedition.peopleCount <= 6)){
+  }else if(expedition.peopleCount <= 6){
       const tmp = expedition.peoples
       tmp.push({name, lastName, number})
       await expeditionCollection.findOneAndUpdate({_id: new ObjectId(expedition._id)}, 
